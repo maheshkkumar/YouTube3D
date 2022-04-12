@@ -162,3 +162,5 @@ cython_debug/
 # weights
 *.pth
 *.bin
+*.pkl
+*.csv
