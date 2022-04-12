@@ -1,6 +1,7 @@
-import torch.nn as nn
 import math
+
 import torch
+import torch.nn as nn
 
 # 
 # 
@@ -356,7 +357,7 @@ class ReDWebNet_resnet50(nn.Module):
         print("==================================================="        )
         # Encoder
         self.resnet_model = ResNet(block=Bottleneck, layers=[3, 4, 6, 3])
-        self.resnet_model.load_state_dict(torch.load('resnet50_no_fc.bin'))
+        # self.resnet_model.load_state_dict(torch.load('resnet50_no_fc.bin'))
         
 
 

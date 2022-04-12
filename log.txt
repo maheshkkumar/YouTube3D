@@ -1,0 +1,4 @@
+Updated the original YouTube3D code to use a config file instead of argparse.
+Added the following files:
+1. ./eval.py
+2. ./log.txt
