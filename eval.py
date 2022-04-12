@@ -29,7 +29,7 @@ class YouTube3D():
             pred = self.model(img)
 
         pred = pred.squeeze().cpu().numpy()
-        import ipdb; ipdb.set_trace()
+        
         # min max normalization
         pred = (pred - pred.min()) / (pred.max() - pred.min())
         
