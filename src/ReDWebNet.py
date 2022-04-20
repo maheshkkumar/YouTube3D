@@ -177,7 +177,7 @@ class ResidualConv(nn.Module):
     def __init__(self, in_out_planes = 256):
         super(ResidualConv, self).__init__()
 
-        print("\tResidualConv")
+        # print("\tResidualConv")
 
         self.conv1 = nn.Conv2d(in_out_planes, in_out_planes, kernel_size=3, bias=False, padding=1)
         self.bn1 = nn.BatchNorm2d(in_out_planes)
@@ -218,7 +218,7 @@ class BottleNeckConv(nn.Module):
     def __init__(self, in_out_planes = 256):
         super(BottleNeckConv, self).__init__()
 
-        print("\tBottleNeckConv")
+        # print("\tBottleNeckConv")
 
         self.conv1 = nn.Conv2d(in_out_planes, in_out_planes / 4, kernel_size=1, bias=False)
         self.bn1 = nn.BatchNorm2d(in_out_planes / 4)
@@ -351,10 +351,10 @@ class ReDWebNet_resnet50(nn.Module):
     def __init__(self):
         super(ReDWebNet_resnet50, self).__init__()
 
-        print("===================================================")
-        print("Using ReDWebNet_resnet50")   
-        print("\tLoading pretrained resnet 50...")
-        print("==================================================="        )
+        # print("===================================================")
+        # print("Using ReDWebNet_resnet50")   
+        # print("\tLoading pretrained resnet 50...")
+        # print("==================================================="        )
         # Encoder
         self.resnet_model = ResNet(block=Bottleneck, layers=[3, 4, 6, 3])
         # self.resnet_model.load_state_dict(torch.load('resnet50_no_fc.bin'))
@@ -435,10 +435,10 @@ class ReDWebNet_resnet101(nn.Module):
     def __init__(self):
         super(ReDWebNet_resnet101, self).__init__()
 
-        print("===================================================")
-        print("Using ReDWebNet_resnet101")   
-        print("\tLoading pretrained resnet 101...")
-        print("==================================================="        )
+        # print("===================================================")
+        # print("Using ReDWebNet_resnet101")   
+        # print("\tLoading pretrained resnet 101...")
+        # print("==================================================="        )
         # Encoder
 
         self.resnet_model = ResNet(block=Bottleneck, layers=[3, 4, 23, 3])
